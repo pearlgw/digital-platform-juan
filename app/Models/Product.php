@@ -35,6 +35,6 @@ class Product extends Model
       */
      public function transaksi(): HasMany
      {
-         return $this->hasMany(Transaksi::class);
+         return $this->hasMany(Transaksi::class, 'product_id', 'id');
      }
 }
