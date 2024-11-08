@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\FrontController;
+use App\Http\Controllers\HistoriTransaksiController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\TransaksiController;
@@ -21,7 +22,8 @@ Route::middleware('auth')->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
     Route::post('/buy', [TransaksiController::class, 'buy'])->name('buy');
-    Route::get('/histori-transaksi', [TransaksiController::class, 'historiTransaksi'])->name('histori-transaksi');
+    // Route::get('/histori-transaksi', [TransaksiController::class, 'historiTransaksi'])->name('histori-transaksi');
+    Route::get('/histori-transaksi', [HistoriTransaksiController::class, 'historiTransaksi'])->name('histori-transaksi');
 
     Route::prefix('admin')->name('admin.')->group(function () {
         Route::middleware('can:manage users')->group(function () {
