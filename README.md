@@ -56,4 +56,4 @@ php artisan serve
 ```
 
 ## Demo
-https://gw-poliklinik.natagw.my.id (base on Desktop)
+https://digitalplatformreseller.natagw.my.id
