@@ -43,7 +43,13 @@ php artisan migrate
 php artisan db:seed
 ```
 
-### Langkah 7: Menjalankan Server
+### Langkah 7: Membuat Link Storage
+
+```bash
+php artisan storage:link
+```
+
+### Langkah 8: Menjalankan Server
 
 ```bash
 php artisan serve
