@@ -1,5 +1,5 @@
 ## ERD Poliklinik (BK)
-![ERD Poliklinik](https://github.com/pearlgw/bk-poliklinik/blob/master/public/img/erd_poliklinik.png)
+![ERD Digital Platform Reseller](https://github.com/pearlgw/digital-platform-juan/blob/main/public/img/erd_digital_platform_reseller.png)
 
 # Panduan Menjalankan Proyek Laravel
 
