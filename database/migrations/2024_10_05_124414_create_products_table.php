@@ -17,11 +17,10 @@ return new class extends Migration
             $table->integer('harga_produk');
             $table->text('deskripsi');
             $table->integer('jumlah_produksi');
-            $table->string('foto_produk');
+            $table->string('foto_produk')->nullable();
             $table->enum('status', ['approved', 'pending'])->default('pending');
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
             $table->timestamps();
-            $table->softDeletes();
         });
     }
 

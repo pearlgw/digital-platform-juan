@@ -59,15 +59,34 @@ class RolePermissionSeeder extends Seeder
 
         $produsenRole->syncPermissions($produsenPermission);
 
-        $userProdusen = User::create([
-            'name' => 'Produsen',
-            'email' => 'produsen@gmail.com',
-            'password' => bcrypt('password'),
-            'no_telfon' => '+628578389383',
-            'alamat' => 'ngawen'
-        ]);
+        $userProdusens = [
+            [
+                'name' => 'Produsen1',
+                'email' => 'produsen1@gmail.com',
+                'password' => bcrypt('password'),
+                'no_telfon' => '+628578389383',
+                'alamat' => 'ngawen'
+            ],
+            [
+                'name' => 'Produsen2',
+                'email' => 'produsen2@gmail.com',
+                'password' => bcrypt('password'),
+                'no_telfon' => '+628578389383',
+                'alamat' => 'ngawen'
+            ],
+            [
+                'name' => 'Produsen3',
+                'email' => 'produsen3@gmail.com',
+                'password' => bcrypt('password'),
+                'no_telfon' => '+628578389383',
+                'alamat' => 'ngawen'
+            ],
+        ];
 
-        $userProdusen->assignRole($produsenRole);
+        foreach($userProdusens as $userProdusen){
+            $createdProdusen = User::create($userProdusen);
+            $createdProdusen->assignRole($produsenRole);
+        }
 
         $adminRole = Role::firstOrCreate([
             'name' => 'admin'
